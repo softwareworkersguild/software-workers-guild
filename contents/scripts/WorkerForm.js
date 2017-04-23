@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import CheckList from './CheckList.js'
 import * as WorkerState from './WorkerState.js';
+import * as UrlUtils from './UrlUtils.js';
 import items from './items.json';
 
 class WorkerForm extends Component {
@@ -21,8 +22,18 @@ class WorkerForm extends Component {
     this.setState(newState);
   }
 
+  recruiterLink() {
+    const blob = WorkerState.toBase64(this.state);
+    return `${UrlUtils.resolvePath('./recruiters')}?i=${blob}`;
+  }
+
   render() {
-    return <CheckList items={items} enabled={this.state.enabled} onToggle={this.toggle.bind(this)}/>
+    return <div>
+      <CheckList items={items} enabled={this.state.enabled} onToggle={this.toggle.bind(this)}/>
+
+      Send this to recruiters:<p/> {this.recruiterLink()}
+
+    </div>
   }
 }
 

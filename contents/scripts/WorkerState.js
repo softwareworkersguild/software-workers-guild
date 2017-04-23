@@ -30,3 +30,7 @@ export function toQuery(state) {
   }
   return querystring.stringify(map);
 }
+
+export function toBase64(state) {
+  return btoa(toQuery(state)).replace('=', '_');
+}

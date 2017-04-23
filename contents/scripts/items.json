@@ -1,10 +1,10 @@
 [
     {
-        "id": "public-diversity-stats",
+        "id": "pds",
         "text": "Publish diversity statistics"
     },
     {
-        "id": "reasonable-on-call",
+        "id": "roc",
         "text": "Reasonable on call policies (see link for what reasonable means...)"
     }
 ]
