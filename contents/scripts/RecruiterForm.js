@@ -10,6 +10,16 @@ class RecruiterForm extends Component {
     this.state = RecruiterState.fromQuery(window.location.search);
   }
 
+  toggle(id, value) {
+    const newState = RecruiterState.setEnabled(this.state, id, value);
+
+    const location = window.location.href.split('?')[0];
+    const query = RecruiterState.toQuery(this.state);
+    window.history.replaceState('', '', `${location}?${query}`);
+
+    this.setState(newState);
+  }
+
   visibleItems() {
     return items.filter(i => this.state.visible.has(i.id));
   }
@@ -17,8 +27,8 @@ class RecruiterForm extends Component {
   render() {
     return <CheckList
       items={this.visibleItems()}
-      onToggle={() => {}}
-      enabled={new Set()}
+      onToggle={this.toggle.bind(this)}
+      enabled={this.state.enabled}
     />;
   }
 }
