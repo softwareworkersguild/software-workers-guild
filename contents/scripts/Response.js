@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Response extends Component {
   render() {
     return <div>
-      <textarea
+      <textarea readOnly
         ref={e => this._text=e}
         value={this.props.text}
       />
