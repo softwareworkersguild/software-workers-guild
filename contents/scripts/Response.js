@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 class Response extends Component {
   render() {
     return <div>
-      <textarea
-        ref={e => this._text=e}
-        value={this.props.text}
-      />
+      <p className="response">
+      {this.props.text}
+      </p>
       <button onClick={() => {
           this._text.select();
           document.execCommand('copy');

@@ -349,6 +349,10 @@ code.lang-markdown .bullet {
   color: #bbb;
 }
 
+.response {
+  font-size: 10pt;
+}
+
 /* Tomorrow Theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
