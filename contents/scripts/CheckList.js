@@ -14,7 +14,7 @@ class CheckItem extends Component {
   }
 }
 
-export class CheckList extends Component {
+export default class CheckList extends Component {
   render() {
     return <div> {
       this.props.items.map(item => {
