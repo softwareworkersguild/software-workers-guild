@@ -32,5 +32,5 @@ export function toQuery(state) {
 }
 
 export function toBase64(state) {
-  return btoa(toQuery(state)).replace('=', '_');
+  return btoa(JSON.stringify(Array.from(state.enabled)))
 }
