@@ -8,6 +8,7 @@ html(lang='en')
       title=page.title  + " | " + locals.name
       link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href=contents.css['main.css'].url)
+      | !{ livereloadScript }
   body(class=bodyclass)
     header.header
       div.content-wrap

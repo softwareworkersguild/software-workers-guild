@@ -2,5 +2,14 @@
   "locals": {
     "name": "Software Workers Guild",
     "email": "webmaster@softwareworkersguild.org"
+  },
+  "plugins": [
+    "wintersmith-browserify",
+    "wintersmith-livereload"
+  ],
+  "browserify": {
+    "transform": [
+        ["babelify", {"presets": ["es2015", "react"]}]
+    ]
   }
 }

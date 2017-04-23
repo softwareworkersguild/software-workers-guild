@@ -1,0 +1,5 @@
+{
+  "title": "Workers",
+  "template": "form.jade",
+  "root": "WorkerForm"
+}

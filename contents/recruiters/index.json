@@ -1,0 +1,5 @@
+{
+  "title": "Recruiters",
+  "template": "form.jade",
+  "root": "RecruiterForm"
+}
