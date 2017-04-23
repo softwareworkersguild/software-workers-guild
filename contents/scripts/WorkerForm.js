@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 
 import CheckList from './CheckList.js'
+import Response from './Response.js'
 import * as WorkerState from './WorkerState.js';
 import * as UrlUtils from './UrlUtils.js';
 import items from './items.json';
+
+const message = (url, name) => `Hi,
+
+Thanks for reaching out. Before I consider working for you I would like to know if your company adheres to my values.
+Please follow my Software Workers Guild checklist to and send me the results:
+
+${url}
+
+I look forward to hearing back.
+
+- ${name}`;
 
 class WorkerForm extends Component {
 
@@ -30,9 +42,8 @@ class WorkerForm extends Component {
   render() {
     return <div>
       <CheckList items={items} enabled={this.state.enabled} onToggle={this.toggle.bind(this)}/>
-
-      Send this to recruiters:<p/> {this.recruiterLink()}
-
+      Send this to recruiters:
+      <Response text={message(this.recruiterLink(), "Human")} />
     </div>
   }
 }
